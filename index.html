@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReduxCoreX</title><link rel="stylesheet" href="style.css?v=20260910">
+</head>
+<body>
+<div class="bg"></div><div class="grain"></div>
+<header>
+  <div class="topbar">
+    <div class="logo"><span>REDUX</span><b>CoreX</b></div>
+    <nav class="top-nav" aria-label="Main navigation">
+      <button class="top-tab active" data-open="home">HOME</button>
+      <button class="top-tab" data-open="redux">REDUX</button>
+      <button class="top-tab" data-open="guns">GUN PACK</button>
+      <button class="top-tab" data-open="armor">BODY ARMOR</button>
+      <button class="top-tab" data-open="profile">PROFILE</button>
+    </nav>
+    <button class="account-chip" id="accountChip" data-open="profile"><span class="status-dot"></span><span id="accountText">ONLINE</span><img id="topAvatar" alt="" hidden></button>
+  </div>
+</header>
+<main>
+<section id="home" class="page active">
+  <div class="hero"><p>MODDING PROJECT</p><h1>REDUX<span>CoreX</span></h1><div class="line"></div><small>Choose your section</small></div>
+  <div class="home-menu">
+    <button class="menu-card" data-open="redux"><span>01 / REDUX</span><strong>REDUX</strong><em>EXPLORE COLLECTION</em><b>OPEN <i>↗</i></b></button>
+    <button class="menu-card gun-card" data-open="guns"><span>02 / GUN PACK</span><strong>GUN PACK</strong><em>EXPLORE COLLECTION</em><b class="open-label">OPEN <i>↗</i></b></button>
+    <button class="menu-card" data-open="armor"><span>03 / BODY ARMOR</span><strong>BODY ARMOR</strong><em>EXPLORE COLLECTION</em><b>OPEN <i>↗</i></b></button>
+  </div>
+</section>
+<section id="redux" class="page"><button class="back" data-open="home">← HOME</button><div class="section-head"><span>REDUX</span><h2>DOWNLOAD</h2><p>Вход в аккаунт нужен для скачивания Redux.</p></div><div class="download-grid">
+  <article class="download-card"><div><small>REDUX / 01</small><h3>GRAY REDUX</h3><p>Основная сборка Redux для GTA V RP.</p><a class="download auth-download" data-category="REDUX" data-item="GRAY REDUX" href="https://drive.google.com/uc?export=download&id=1hv9_LMvos60YdNgVG1K6JPAXq_DKl7XH" target="_blank" rel="noopener">СКАЧАТЬ ↓</a></div></article>
+</div></section>
+<section id="guns" class="page"><button class="back" data-open="home">← HOME</button><div class="section-head"><span>GUN PACK</span><h2>DOWNLOAD</h2><p>Для скачивания нужен аккаунт.</p></div><div class="download-grid">
+  <article class="download-card"><div><small>GUN PACK / 01</small><h3>GITO V5</h3><p>Актуальный архив Gun Pack с файлами мода.</p><a class="download auth-download" data-category="GUN PACK" data-item="GITO V5" href="downloads/GITO_V5.zip" download>СКАЧАТЬ ZIP ↓</a></div></article>
+</div></section>
+<section id="armor" class="page"><button class="back" data-open="home">← HOME</button><div class="section-head"><span>BODY ARMOR</span><h2>DOWNLOAD</h2><p>Для скачивания нужен аккаунт.</p></div><div class="download-grid">
+  <article class="download-card"><div><small>ARMOR / 01</small><h3>BODY ARMOR</h3><p>Бронежилеты и экипировка для RP.</p><button class="download disabled">СКОРО</button></div></article>
+</div></section>
+<section id="profile" class="page profile-page"><button class="back" data-open="home">← HOME</button><div class="section-head"><span>PERSONAL AREA</span><h2>PROFILE</h2><p>Твой аккаунт ReduxCoreX и история скачиваний.</p></div>
+  <div id="loggedOut" class="profile-panel auth-panel">
+    <div class="profile-avatar big-avatar">?</div><h3>Войди в ReduxCoreX</h3><p>После входа доступно скачивание Redux, Gun Pack и будущих модов.</p>
+    <div class="auth-actions"><button class="download" id="openLogin">ВОЙТИ</button><button class="download secondary" id="openRegister">РЕГИСТРАЦИЯ</button></div>
+  </div>
+  <div id="loggedIn" class="profile-panel" hidden>
+    <div class="profile-main"><div class="avatar-wrap"><img id="profileAvatar" class="profile-avatar" alt="Аватар"><label class="avatar-upload">ИЗМЕНИТЬ АВАТАР<input id="avatarInput" type="file" accept="image/*"></label></div><div class="profile-info"><small>ACCOUNT</small><div class="profile-name-line"><h3 id="profileName">User</h3><span class="admin-badge" id="adminBadge" hidden>ADMIN</span></div><div class="account-details"><div class="detail-row"><span class="detail-label">ИМЯ</span><strong id="profileDisplayName">User</strong></div><div class="detail-row private-row"><span class="detail-label">ЮЗЕРНЕЙМ</span><strong id="profileUsername" class="private-value">••••••••</strong><button type="button" class="email-toggle" id="usernameToggle">ПОКАЗАТЬ</button></div><div class="detail-row private-row"><span class="detail-label">EMAIL</span><strong id="profileEmail" class="email-blurred"></strong><button type="button" class="email-toggle" id="emailToggle">ПОКАЗАТЬ</button></div></div><div class="nickname-edit"><input id="nicknameInput" type="text" maxlength="40" placeholder="Новое имя"><button class="download secondary small-btn" id="saveNickname" type="button">СОХРАНИТЬ ИМЯ</button></div><div id="nicknameMessage" class="nickname-message"></div><button class="download secondary small-btn" id="signOut">ВЫЙТИ</button></div></div>
+    <div class="history-head"><span>DOWNLOAD HISTORY</span><strong>ТВОИ СКАЧИВАНИЯ</strong><p>Здесь автоматически появляются моды, которые ты скачивал. Повторное скачивание увеличивает счётчик.</p></div><div id="history" class="history-list"><div class="download-categories"></div></div>
+  </div>
+</section>
+</main>
+<footer><div>ReduxCoreX is a project created by a single player, Rostislav Krechet.</div><div>All modifications are compatible with GTA5RP, RMRP and other RP projects.</div><div>This is only the first test version of the website and the project will continue to grow.</div><div>Discord: @cutrixtt</div><div>© 2026 ReduxCoreX • Created by @cutrixtt</div></footer>
+<div class="modal" id="authModal" aria-hidden="true"><div class="modal-box"><button class="modal-close" id="closeAuth">×</button><div class="modal-kicker">REDUX COREX</div><h2 id="authTitle">ВХОД</h2><p id="authHint">Войди в аккаунт, чтобы продолжить.</p><form id="authForm"><label id="emailLabel">EMAIL<input id="email" type="email" autocomplete="email"></label><label id="nameLabel" hidden>ИМЯ<input id="name" type="text" autocomplete="name"></label><label>ЮЗЕРНЕЙМ<input id="username" type="text" required autocomplete="username"></label><label>ПАРОЛЬ<input id="password" type="password" required minlength="6" autocomplete="current-password"></label><button class="download" id="authSubmit" type="submit">ВОЙТИ</button></form><button class="switch-auth" id="switchAuth">Нет аккаунта? Регистрация</button><div id="authMessage" class="auth-message"></div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="script.js?v=20260910"></script>
+</body></html>
